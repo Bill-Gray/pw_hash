@@ -1,0 +1,92 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>SHA-256 Cryptographic Hash Algorithm implemented in JavaScript | Movable Type Scripts</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Chris Veness, www.movable-type.co.uk, 2002-2017">
+    <meta name="keywords" content="sha-2 sha-256 hash function message digest algorithm javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="sha256.js"></script>
+    <script>
+        'use strict';
+        var doc = document; doc.qrySel = doc.querySelector; doc.qrySelAll = doc.querySelectorAll; // shorthand
+
+        document.addEventListener('DOMContentLoaded', function(event) {
+            doc.qrySel('#message').oninput = function() {
+                var hash = Sha256.hash( this.value, { outFormat: 'hex'} )
+                doc.qrySel('#digest').value = hash;
+
+                hash = Sha256.hash( "a" + this.value,
+                        { maxLength: 15, specialChars: ''} )
+                doc.qrySel('#cpanel_pwd').value = hash;
+
+                hash = Sha256.hash( "crazy" + this.value + "!@",
+                        { maxLength: 17, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~'} )
+                doc.qrySel('#yahoo_pwd').value = hash;
+
+                hash = Sha256.hash( "cΣ1(§x)razy" + this.value + "!§@",
+                        { maxLength: 37, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~'} )
+                doc.qrySel('#github_pwd').value = hash;
+
+                hash = Sha256.hash( "3145§@.2d@P" + this.value + "MW<io!§@",
+                        { maxLength: 20, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~'} )
+                doc.qrySel('#email_pwd').value = hash;
+            };
+
+            doc.qrySel('#message').focus();
+            doc.qrySel('#message').select();
+
+            doc.qrySel('#message').oninput(); // initial hash call
+        });
+    </script>
+</head>
+
+<body>
+
+<form name="f">
+  <fieldset>
+  <legend>Enter any message to generate passwords </legend>
+  <ul>
+    <li>
+      <label for="message"> Message </label>
+      <textarea name="message" id="message"">abc</textarea>
+    </li>
+
+    <li>
+      <label for="cpanel_pwd">cPanel</label>
+      <input type="text" name="cpanel_pwd" id="cpanel_pwd" readonly">
+    </li>
+
+    <li>
+      <label for="yahoo_pwd"> Yahoo<i>!</i> </label>
+      <input type="text" name="yahoo_pwd" id="yahoo_pwd" readonly">
+    </li>
+
+    <li>
+      <label for="github_pwd"> GitHub </label>
+      <input type="text" name="github_pwd" id="github_pwd" size="40" readonly">
+    </li>
+
+    <li>
+      <label for="email_pwd"> E-mail </label>
+      <input type="text" name="email_pwd" id="email_pwd" readonly">
+    </li>
+
+    <li>
+      <label for="digest"> SHA256 </label>
+      <input type="text" size="65" name="digest" id="digest" readonly">
+    </li>
+
+
+    <li><small><i>Note SHA-256 hash of ‘abc’ should be:
+        ba7816bf 8f01cfea 414140de 5dae2223 b00361a3 96177a9c b410ff61 f20015ad</i></small></li>
+  </ul>
+  </fieldset>
+</form>
+
+<p> <a href="http://www.projectpluto.com/pw_hasher.htm"> Details behind this page <b>(read this
+before entering passwords or sensitive information into this form) </b> </a> </p>
+
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <title> Password generation/management in JavaScript </title>
@@ -16,37 +16,57 @@
                 var hash = Sha256.hash( this.value, { outFormat: 'hex'} )
                 doc.qrySel('#digest').value = hash;
 
-                hash = Sha256.hash( "ĉPåñẽł" + this.value + "f0110ŵìǹĝ Sạ!ŧ",
-                        { maxLength: 15, specialChars: ''} )
-                doc.qrySel('#cpanel_pwd').value = hash;
-
-                hash = Sha256.hash( "Ȳâħoø<i>!</i>" + this.value + "!27¾@",
-                        { maxLength: 17, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~'} )
-                doc.qrySel('#yahoo_pwd').value = hash;
-
-                hash = Sha256.hash( "cΣ1(§x)razy" + this.value + "!§@",
-                        { maxLength: 1, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~', specialOnly: 'y'} )
-                     + Sha256.hash( "Gìtħûb®" + this.value + "9!§§⅕@",
-                        { maxLength: 1, specialChars: '1234567890', specialOnly: 'y'} )
-                     + Sha256.hash( "Gìtħûb®" + this.value + "9!§@",
-                        { maxLength: 20, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~'} )
-                doc.qrySel('#github_pwd').value = hash;
-
-                hash = Sha256.hash( "3145§@.2d@P" + this.value + "MW<io!§@",
+                hash = Sha256.hash( "I0ıĲKÛ0ÂŊ^ēóăġĆÏ" + this.value + "cĹĝIĢ)xdèé|ÐI÷RrĂ",
                         { maxLength: 20, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~'} )
                 doc.qrySel('#email_pwd').value = hash;
 
-                hash = Sha256.hash( "3⅐≈π;มาลัย" + this.value + "Åḿaz∅ǹ™",
+                hash = Sha256.hash( "ŐDöąĀĠłĝģè:6ľõÖ\" + this.value + "ħĭēĎAÓÏĖèÑTĶåĨQıĉ",
                         { maxLength: 25, specialChars: '!"#$%&()*+,-./:;<=>?@[\]^_`{|}~'} )
                 doc.qrySel('#amazon_pwd').value = hash;
 
-                hash = Sha256.hash( "♠!1⅔4♣5§@.2d@P" + this.value + "Göôgł∉",
+                hash = Sha256.hash( "ÓoIjĒĩÒ,čÿÇL:6ßđ" + this.value + "ĂÀ8V5ŏőHąvĕĎŉJ9Ĝċ",
+                        { maxLength: 15, specialChars: ''} )
+                doc.qrySel('#cpanel_pwd').value = hash;
+
+                hash = Sha256.hash( "éĨ=æ9-ģb(`iÅįT9Q" + this.value + "N+îDõĄ»ĩÈ@äįĚæąĈŃ",
+                        { maxLength: 20, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~'} )
+                doc.qrySel('#facebook_pwd').value = hash;
+
+                hash = Sha256.hash( "İ]eċ6&ăø`ŋĘ!wÍUŋ" + this.value + "ãoăMÜıPÝgßēèĔ[ħĐ±",
+                        { maxLength: 1, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~', specialOnly: 'y'} )
+                     + Sha256.hash( "ĽŊtyÌĊēı»Ė5óĆòŉ±" + this.value + "[-ÔØ3IîĚtö½=ÑČęīû",
+                        { maxLength: 1, specialChars: '1234567890', specialOnly: 'y'} )
+                     + Sha256.hash( "őì*Ċ·fģ|!h+őµÂio" + this.value + "½ÖìŎěĂoKxĳb?ďļ#4·",
+                        { maxLength: 20, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~'} )
+                doc.qrySel('#github_pwd').value = hash;
+
+                hash = Sha256.hash( "¿±»âŏă4ëèhµ·HÑ7Ĥ" + this.value + "&ÓðńőÜâĽ5åĽĐ^IÉĥĬ",
                         { maxLength: 20, specialChars: '!"#$%&()*+,-./:;<=>?@[\]^_`{|}~' + "'"} )
                 doc.qrySel('#google_pwd').value = hash;
 
-                hash = Sha256.hash( "⅕|15-đɨǥìŧ" + this.value + "P1n",
+                hash = Sha256.hash( "4ºéġò_ė#öŃ|ġ@÷ļç" + this.value + "òĤĴÛĆçÜúă9ÝÆğ ćĳ.",
+                        { maxLength: 20, specialChars: '!"#$%&()*+,-./:;<=>?@[\]^_`{|}~' + "'"} )
+                doc.qrySel('#paypal_pwd').value = hash;
+
+                hash = Sha256.hash( "äûĥÏûoéAăďÄÌŐtÖû" + this.value + "ÈTÐëĻňĪ¼QäòþğesCX",
+                        { maxLength: 20, specialChars: '!"#$%&()*+,-./:;<=>?@[\]^_`{|}~' + "'"} )
+                doc.qrySel('#skype_pwd').value = hash;
+
+                hash = Sha256.hash( "bÄÚv¸±É½\AtuěõÍU" + this.value + "ļ¾4ŐGÝį*ķåļtés8Ňē",
+                        { maxLength: 20, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~'} )
+                doc.qrySel('#twitter_pwd').value = hash;
+
+                hash = Sha256.hash( "Ë}ïp6AĉpØŅiýĽéÆı" + this.value + "Zăh3Ā(ëĪmÈ>Ĉ}ÕĚ+č",
+                        { maxLength: 17, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~'} )
+                doc.qrySel('#yahoo_pwd').value = hash;
+
+                hash = Sha256.hash( "ĝÍÂsiĘèēĕıÖüpÑÂC" + this.value + "Ãı¹6Ě»Õ?}ÁėÏ)ĄŉrÐ",
                         { maxLength: 15, specialChars: '1234567890', specialOnly: 'y'} )
                 doc.qrySel('#pin15_pwd').value = hash;
+
+                hash = Sha256.hash( "ûfŎPCęÍUħoĒÃĻÛ%Ĭ" + this.value + "'EýóÛ÷zŎ9Mo7µVç=ě",
+                        { maxLength: 10, specialChars: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', specialOnly: 'y'} )
+                doc.qrySel('#uppercase_pwd').value = hash;
             };
 
             doc.qrySel('#message').focus();
@@ -60,7 +80,9 @@
 <body>
 
 <p> <a href="https://github.com/Bill-Gray/pw_hash/blob/master/README.md">
-Details behind this page <b>(read this before entering real,  non-pretend passwords or
+Details behind this page </a> (experiment fearlessly with made-up passwords;
+<a href="https://github.com/Bill-Gray/pw_hash/blob/master/README.md">
+<b> read this before entering real,  non-pretend passwords or
 sensitive information into this form) </b> </a> </p>
 
 <form name="f">
@@ -70,21 +92,6 @@ sensitive information into this form) </b> </a> </p>
     <li>
       <label for="message"> Message </label>
       <textarea name="message" id="message">abc</textarea>
-    </li>
-
-    <li>
-      <label for="cpanel_pwd">cPanel</label>
-      <input type="text" name="cpanel_pwd" id="cpanel_pwd" readonly>
-    </li>
-
-    <li>
-      <label for="yahoo_pwd"> Yahoo<i>!</i> </label>
-      <input type="text" name="yahoo_pwd" id="yahoo_pwd" readonly>
-    </li>
-
-    <li>
-      <label for="github_pwd"> GitHub </label>
-      <input type="text" name="github_pwd" id="github_pwd" size="40" readonly>
     </li>
 
     <li>
@@ -98,13 +105,53 @@ sensitive information into this form) </b> </a> </p>
     </li>
 
     <li>
+      <label for="cpanel_pwd">cPanel</label>
+      <input type="text" name="cpanel_pwd" id="cpanel_pwd" readonly>
+    </li>
+
+    <li>
+      <label for="facebook_pwd">Facebook</label>
+      <input type="text" name="facebook_pwd" id="facebook_pwd" readonly>
+    </li>
+
+    <li>
+      <label for="github_pwd"> GitHub </label>
+      <input type="text" name="github_pwd" id="github_pwd" size="40" readonly>
+    </li>
+
+    <li>
       <label for="google_pwd"> Google </label>
       <input type="text" name="google_pwd" id="google_pwd" readonly>
     </li>
 
     <li>
+      <label for="paypal_pwd"> PayPal® </label>
+      <input type="text" name="paypal_pwd" id="paypal_pwd" readonly>
+    </li>
+
+    <li>
+      <label for="skype_pwd"> Skype™ </label>
+      <input type="text" name="skype_pwd" id="skype_pwd" readonly>
+    </li>
+
+    <li>
+      <label for="twitter_pwd">Twitter</label>
+      <input type="text" name="twitter_pwd" id="twitter_pwd" readonly>
+    </li>
+
+    <li>
+      <label for="yahoo_pwd"> Yahoo<i>!</i> </label>
+      <input type="text" name="yahoo_pwd" id="yahoo_pwd" readonly>
+    </li>
+
+    <li>
       <label for="pin15_pwd"> 15-digit PIN </label>
       <input type="text" name="pin15_pwd" id="pin15_pwd" readonly>
+    </li>
+
+    <li>
+      <label for="uppercase_pwd"> 10-letter uppercase-only </label>
+      <input type="text" name="uppercase_pwd" id="uppercase_pwd" readonly>
     </li>
 
     <li>

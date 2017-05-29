@@ -3,6 +3,7 @@
 /*                                                                                   MIT Licence  */
 /* www.movable-type.co.uk/scripts/sha256.html                                                     */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* Revised/mangled by Bill Gray to generate passwords as well as SHA-256 hashes                   */
 
 'use strict';
 

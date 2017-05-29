@@ -46,7 +46,7 @@ static void show_salt( FILE *ifile, int count, bool use_non_ascii)
       c += 0x20;     /* unicode starts at 0x20 = space */
       if( c > 0x7e)  /* and has a gap between 0x7e='~' and 0xb0 */
          c += 0xb0 - 0x7e;
-      if( c != '"' && (c <= '~' || use_non_ascii))
+      if( c != '"' && c != '\\' && (c <= '~' || use_non_ascii))
          {
          fprintf( ofile, "%lc", (wchar_t)c);
          count--;

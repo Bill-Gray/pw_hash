@@ -20,7 +20,7 @@
                         { maxLength: 20, specialChars: '!@#$%^&*(){}[]/=?+_-",<>.`~'} )
                 doc.qrySel('#email_pwd').value = hash;
 
-                hash = Sha256.hash( "ŐDöąĀĠłĝģè:6ľõÖ\" + this.value + "ħĭēĎAÓÏĖèÑTĶåĨQıĉ",
+                hash = Sha256.hash( "ŐDöąĀĠłĝģè:6ľõÖ)" + this.value + "ħĭēĎAÓÏĖèÑTĶåĨQıĉ",
                         { maxLength: 25, specialChars: '!"#$%&()*+,-./:;<=>?@[\]^_`{|}~'} )
                 doc.qrySel('#amazon_pwd').value = hash;
 

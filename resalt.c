@@ -76,12 +76,19 @@ int main( const int argc, const char **argv)
                use_non_ascii = false;
                break;
             case 'o':
-               ofile = fopen( argv[i] + 2, "wb");
+               {
+               const char *ofilename = argv[i] + 2;
+
+               if( !*ofilename && i < argc - 1)
+                  ofilename = argv[i + 1];
+               ofile = fopen( ofilename, "wb");
                if( !ofile)
                   {
-                  printf( "Couldn't open %s\n", argv[i] + 2);
+                  fprintf( stderr, "Couldn't open output file %s: ", ofilename);
+                  perror( "");
                   return( -2);
                   }
+               }
                break;
             default:
                printf( "Unrecognized command line option '%s'\n", argv[i]);

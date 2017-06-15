@@ -131,7 +131,7 @@ class Sha256 {
            default:
               // convert H0..H7 to hex strings (with leading zeros)
               var rval = "";
-              var accepted_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" + opt.specialChars;
+              var accepted_chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz0123456789" + opt.specialChars;
 
               if( opt.specialOnly == 'y')
                     accepted_chars = opt.specialChars;

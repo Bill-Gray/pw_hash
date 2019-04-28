@@ -1,0 +1,97 @@
+# For use with 'pw.c'.  This is an example of usage.  In theory,  you
+# could just go ahead and use it,  but that would show more trust in
+# me than you probably ought to have.
+#
+# For each password,  you need to specify the site name;  password length;
+# salt (must be 64 characters;  all characters accepted);  and a 'text'
+# describing the accepted characters on that site.  There may also be
+# a 'Must-have' line,  for the (many) sites that insist you need a digit
+# and/or 'special' character.
+#
+# Here are example salts.   I got these from /dev/random (see 'random.c'
+# in https://www.github.com/Bill-Gray/prngs;  I ran ./random -r93.)  You
+# shouldn't use these,  though.  In theory,  an adversary could say:  "She
+# probably used one of these default salts;  let's set up a pw_hash.txt
+# file with each default and run ./pw_hash Passw0rd1,  etc.  and see if
+# we can generate the right password."
+
+Salt        @#7Zv2A3m?W0:0X`H72g{-2O0e&/@U2UAzSZ0F2}JTc2T3APT/1m.n9a0Fm:6w1a
+Salt        fVE{09\H(F0E1I\Oz2i*U)m0.nsfF0K!':S2J-CJC0w2Gm{!0'Na%N16uPoc2WJ>
+Salt        ){0^*B$C1"lM}02%QIS;0P>0v"1Vc$p30$j05/0s2$tyv01tRV?1/,q"N2Pq5Z}1
+Salt        ,&q&E1]a]g?1]vb[%0;1#65W1Y.ZQ'1`0_K{f2/0J.Tk1K2CWS_0?$+k#21U3Hb1
+Salt        >6[-82U3=@/B2;2B+bd0*LNK&185lbe1s55f^0]77YK0eLjp,0:$Kp.0w2_jtH2>
+Salt        T>OK2X7Bp62g2c![p0&0uz^60BOw8"0.27;uH0&PAJg1h/Bx611%9bF2730%w92Z
+Salt        32dMb1*DWH#2oAwMe2z8F]G2W#:%e0xQypt10ts-L2e0[QGQ0eHk8g1M<#<z2"2h
+Salt        }OA2#9xl@1@)iL/2O1\L$2+U^5^0121XRY0V72;40b*^:C0Y20-8O0b6=%f1NAqD
+Salt        81(11p@122]4Re2o0XCAL182anwx1v1}2_42#D.cm2dW#Bn0EHY:f1wos_N2Y8>@
+Salt        k2Z7!3'0{li5629Fd2m2Mfy0d2Z<.?)1pqZPz2?y6"q0k2r<wY0SC+EP1fc|<W0"
+Salt        AG+uo0I1C.@.03)d2d0u%y>H2G]-XK2ddV&\0KvdWw23\.\+1\2LYE!2f1XlNY00
+Salt        '2_)R2Wp1F=0K"|H21o+kw%0u\B<B2u4i{62J2ELB1|hQqT15/|Jh1hg7/v2I1W=
+Salt        b!1o1e_i12l=LjD2#Fc&N2_0xrVL2943bb0g1Jx*-1fbHgr2MvSZE1vzEJ91c0]v
+Salt        )Z1SY_tu25eVrq2=wc`M0n1bFX-0_15h-V1b@[x71$Z'FY2I*i4J0,O08$0&0RQd
+Salt        C0t1l%>'0JI'F]1j*}7z2y0Thll1R10M=@0W2(t1Z05+:IS2G1LY@P1)14Liz0N.
+Salt        JpK2>F+1j2,+}O62r)0e.0($m@d0.1kEj&2=?E@(0`d#UD1X'yz!2j1qiAB21ck/
+Salt        m2YACId1'Jc:b0N''\J2KdJE.1vnQt01"KY9g0`zj!|0jVQ0c2e4ALt1+lWzy2'2
+Salt        z0ytO}0v19P@C2DZa#b2c+;tD2N2fQh%1W2g*'42h{*vx2(]47@0-l5yq2v2ZGhX
+Salt        31UD/R0noItt0T2&"=.0S5v!Y0M^%M!1*O#m71-XL&\0dYLa[1!0#0)|1\2q0;m0
+Salt        <2!pgw1F^WRz0m.jK'0?5`Ng2pcgQ21<xQ1F06b|K0153!ZnO0Ct9SX2Kc%j<1;_
+Salt        nhY0c?l-j2w2$J%-1iO:%g0v2o[^Y1zG5}x2.7,TE2+1gZi!1S2Aoow1[g{jv0u>
+Salt        !7J0P1g8Lv1i:ch`1]-TbT09mUPj0nb'2F0|?da=0Vc#K=1epVuB09x^Q\1QOKV0
+Salt        l0G(bt2@4IV42I1m6m11*h",n1l2esy$0A9\F<0:SM'.0rz?>?0|MXdQ2>B|2B1N
+Salt        GAd_1lJp/'0ml:ek0ee>G\0$1d$*j0b1+D>s1Qt&#21keSHj0:52F{1/6ur%23jh
+Salt        +|0j:Wnh1y1>u`u2:>-3i28WCh:0yj=+^1N,b{31l073el011Mew2H2[L=l1,Vzc
+Salt        (0*'vTx1&Sc*r0%*APi1Vi?OW2q0\egg0/d4}!1;K7Bl1'ScU$1.&e[/0-+/F>1Z
+Salt        42}AB2pegO;1RKKP(1?NCAU1{xv(p2n2!Yo*1.h^@c246xI911_(B=18hL7`1*0e
+Salt        sZ0ESU''1ik%9-0/2ZsZ^0{1JCcQ2@^<Y*0K0aLf71W8P$I07+2gN0X0}c\m0^`]
+Salt        `z2?0rQJd17>%BV2/mKX<1'DD&$0(2F{jc2P2HLA0H0J,V90WdF=Z175M$n2N2&H
+Salt        &i0I0lhP0^qHkE1?rls"1{:F/"0{k7fb0wpk#<1NU;%_1f1B[Kn0?g1q`0jDSEs2
+Salt        k!Sx42k0?g*^0>wJkg1hEZ?U1c0s9v_1js2BN2B,DDp0<b-B.1SaVWp2E\PjF0,0
+
+# The following 'substitutions' make it a little easier to say things such
+# as "the password can contain mixed-case letters and numbers and must
+# have a 'special' character."
+#
+# The 'Human' option contains letters and numbers,  but no O, I,  or l,
+# because they can be confused with 0 or 1.  You might use this if you
+# want to generate a password that will be written down (despite much dogma
+# to the contrary,  there are cases where that's a reasonable thing to do).
+
+Sub Upper    ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Sub Lower    abcdefghijklmnopqrstuvwxyz
+Sub Digit    0123456789
+Sub Special  !@#$%^&*(){[}]',.",./?=+\|-_
+Sub Human    ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz0123456789
+
+Site        18-char 'any character'
+Length      18
+Salt        msFd0U5tei173-/w0J2i5mW05l3N423Q^k/1"0_Sx-0T?f{x26IfaP0u##CA1,=W
+Text        Lower Upper Digit Specials
+
+Site        8 chars, must have digit
+Length      8
+Salt        D19;*P31?E%KN1xzur61W@KiH27/tD$08&&Pq0/qS%n0hMJ=B0N=>r)033Pz9:1g
+Text        Lower Upper Digit Specials
+Must-have   Digit
+
+Site        Amazon (R)
+Length      18
+Salt        `2yaqb2d1X)V!2q1O)oe0YMV3:153\uT/0?GUUn0p13pJ72\1aAJ"1V1?NQ2C0%"
+Text        Lower Upper Digit Specials
+
+Site        15-digit PIN
+Length      15
+Salt        /0E;70>1A`Bj2x,XF%2eCDtb1"2[;4g0dp'|P0y1z^Z'2%#d3o2`Wpy50J2X"a}0
+Text        Digit
+
+Site        Six-char w/"special" & digit
+Length      6
+Salt        m1@b=$2Ueq!10Wdv9M2cy:2V022F%<^17e0v*0o7/bL1W1vZ/E2DWALc2!2qe't2
+Must-have   Digit !@#$%^&*(){}[]/=\|-_;:',."<>
+Text        Upper Lower Digit !@#$%^&*(){}[]/=\|-_;:',."<>
+
+Site        9 uppercase
+Length      9
+Salt        JJH*g2@QbEt1:0<xe%2yIZR7041h\_[1>Gq8S2W1DE'40C1si4%2`2IF.91I4xcX
+Text        Upper
+
+
